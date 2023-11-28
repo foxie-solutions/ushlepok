@@ -5,6 +5,10 @@ on:
     branches:
       - "main"
 
+permissions: 
+  contents: read
+  packages: write
+
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -34,6 +38,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
           push: true
           tags: ghcr.io/${{ steps.repo.outputs.repo }}:latest
