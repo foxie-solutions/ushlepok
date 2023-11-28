@@ -1,5 +1,9 @@
 name: Docker
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   push:
     branches:
@@ -34,5 +38,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          platforms: linux/amd64
           push: true
           tags: ghcr.io/${{ steps.repo.outputs.repo }}:latest
