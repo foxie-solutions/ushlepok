@@ -23,6 +23,7 @@ pub async fn get(State(AppState { engine, .. }): State<AppState>) -> impl IntoRe
 #[derive(TryFromMultipart, Validate)]
 pub struct AddUshlepok {
     #[garde(skip)]
+    #[form_data(limit = "unlimited")]
     image: axum::body::Bytes,
     #[garde(length(min = 1, max = 100))]
     description: String,
