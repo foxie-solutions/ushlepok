@@ -14,6 +14,6 @@ WORKDIR /app
 
 COPY --from=builder /src/target/release/ushlepok .
 
-CMD ["./ushlepok"]
+CMD ["/app/ushlepok"]
 
 EXPOSE 3000/tcp
