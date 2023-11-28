@@ -28,12 +28,12 @@ jobs:
       - name: Get lowercase repo name
         id: repo
         run: |
-          echo "::set-output name=repo::${GITHUB_REPOSITORY,,}"
+          echo "repo=${GITHUB_REPOSITORY,,}" >> $GITHUB_OUTPUT
 
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm6
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ghcr.io/${{ steps.repo.outputs.repo }}:latest
