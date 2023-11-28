@@ -8,12 +8,12 @@ COPY . .
 RUN cargo build --release
 
 # Run
-FROM alpine:3.18.4
+FROM debian:buster-slim
 
 WORKDIR /app
 
 COPY --from=builder /src/target/release/ushlepok .
 
-CMD ["/app/ushlepok"]
+CMD ["./ushlepok"]
 
 EXPOSE 3000/tcp
