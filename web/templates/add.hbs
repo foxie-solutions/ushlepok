@@ -1,0 +1,20 @@
+{{#> layout}}
+<form method="post" enctype="multipart/form-data">
+    <br>
+    Изображение:<br><input type="file" name="image">
+    <br><br>
+    Клик по изображению ведёт на:<br><input type="text" name="redirect_url">
+    <br><br>
+    Подпись к изображению:<br><input type="text" name="description">
+    <br><br>
+    <input type="checkbox" checked="checked" name="rules"> Согласен(на) с <a href="/rules">правилами</a>.
+    <br><br>
+    <input type="submit" value="Заушлёпить!">
+    <input type="button" value="Ну нах..." onclick="location.href='/'">
+
+    {{#if error}}
+    <br /><br />
+    <pre class="error">{{error}}</pre>
+    {{/if}}
+</form>
+{{/layout}}

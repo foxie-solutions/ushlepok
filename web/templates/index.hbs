@@ -1,0 +1,12 @@
+{{#> layout}}
+<div class="ushlepok">
+  {{#if ushlepok}}
+  {{#with ushlepok}}
+  <a href="{{redirect_url}}"><img src="/image" alt="{{description}}" /></a>
+  <i>{{description}}</i>
+  {{/with}}
+  {{else}}
+  <i>Ушлепка пока нет :(</i>
+  {{/if}}
+</div>
+{{/layout}}

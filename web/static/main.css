@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: serif;
+  font-size: 36pt;
+}
+
+.ushlepok {
+  text-align: center;
+}
+
+.ushlepok img {
+  display: block;
+  margin: auto;
+  padding-bottom: 8pt;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ushlepok i {
+  font-family: Arial, Helvetica;
+  font-style: normal;
+  color: gray;
+}
+
+.navigation {
+  padding-top: 24pt;
+}
+
+.footer {
+  padding-top: 12pt;
+}
