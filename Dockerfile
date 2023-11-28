@@ -1,5 +1,5 @@
 # Build
-FROM rust:1.73.0 as builder
+FROM rust:1.74.0-buster as builder
 
 WORKDIR /src
 
